@@ -5,8 +5,8 @@ app.use(express.json());
 const PORT = process.env.PORT || 4001;
 
 let users = [
-  { id: 1, name: 'Alice' },
-  { id: 2, name: 'Bob' }
+  { id: 1, name: 'Hello, Welcome to my DevOps sample Project. My name is Sai Sujeeth Gorenkala. I'm a Cloud & DevOps Engineer specializing in Cloud, DevOps, SRE, and Platform Engineering, designing and operating large-scale enterprise platforms across AWS, Azure, and hybrid environments. Experience in cloud architecture, Infrastructure as Code, and CI/CD automation using Terraform, CloudFormation, Bicep, Ansible, Jenkins, GitHub Actions, GitLab CI/CD, Azure DevOps' },
+  { id: 2, name: 'Everyone can acheive anything if they put their mind to it' }
 ];
 
 app.get('/health', (req, res) => res.json({ status: 'ok', service: 'user-service' }));
