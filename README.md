@@ -1,4 +1,4 @@
-# DevOps Demo: Microservices CI/CD on Minikube
+# DevOps Project: Microservices CI/CD on Minikube
 
 End-to-end DevOps pipeline for a 3-service Node.js app (`api-gateway` → `user-service`, `product-service`),
 built with Docker, provisioned with Terraform, deployed to Kubernetes (Minikube), and automated with Jenkins.
