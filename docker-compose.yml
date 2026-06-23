@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  user-service:
+    build: ./services/user-service
+    ports:
+      - "4001:4001"
+    environment:
+      - PORT=4001
+
+  product-service:
+    build: ./services/product-service
+    ports:
+      - "4002:4002"
+    environment:
+      - PORT=4002
+
+  api-gateway:
+    build: ./services/api-gateway
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - USER_SERVICE_URL=http://user-service:4001
+      - PRODUCT_SERVICE_URL=http://product-service:4002
+    depends_on:
+      - user-service
+      - product-service
